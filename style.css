@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --graysh-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+
+    --font-family: "Poppins", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family);
+    align-items: center;
+    justify-content: center;
+    margin: 70px auto;
+    font-size: 15px;
+    background-color: var(--very-light-gray);
+}
+
+.title {
+    width: min(90%, 600px);
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 200;
+    line-height: 1.5em;
+    color:hsl(234, 12%, 34%);
+}
+
+.title > span {
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+
+.sub-title {
+    width: min(95%, 600px);
+    margin: 30px auto;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 200;
+   color:hsl(229, 6%, 66%);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: min(85%, 90%);
+    height: max-content;
+}
+
+/* Boxes */
+.column > .box {
+    height: 220px;
+    width: min(100%, 380px);
+    margin: 20px auto;
+    position: relative;
+
+    background-color: white;
+    border-radius: 3px;
+
+    box-shadow: 0 40px 350px -90px hsla(212, 86%, 64%, .8);
+    padding: 20px;
+}
+
+.box1 {
+    border-top: 3px solid var(--cyan);
+}
+
+.box2 {
+    border-top: 3px solid var(--red);
+}
+
+.box3 {
+    border-top: 3px solid var(--orange);
+}
+
+.box4 {
+    border-top: 3px solid var(--blue);
+}
+
+/*Box Content */
+
+.box > .box-title {
+    color:hsl(234, 12%, 34%);
+    font-size: 1.3rem;
+    letter-spacing: .5px;
+}
+
+.box > .box-content {
+    color:hsl(229, 6%, 66%);
+    width: 290px;
+    letter-spacing: .5px;
+    font-size: .9rem;
+    margin: 10px 0;
+}
+
+.box > .icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+@media (min-width: 1250px) {
+    body {
+        margin: 30px auto;
+    }
+
+    .title {
+        font-size: 2.1rem;
+    }
+
+    .main-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+   
+    .main-container > .column {
+        width: 100%;
+    } 
+
+    .column > .box {
+        height: 250px;
+    }
+
+    .column1,
+    .column3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}
+
+@media (min-width: 1000px) {
+  .title {
+      font-size: 2rem;
+  } 
+  
+  .column1 {
+      margin-right: 20px;
+  }
+
+  .column3 {
+      margin-left: 20px;
+  }
+}
